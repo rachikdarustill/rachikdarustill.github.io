@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #myVideo {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .topscreen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 70px;
+            color: #f1daae;
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <!-- <source src="./assets/220114_01_Drone_4k_019.mp4" type="video/mp4"> -->
+            <source src="https://cdn.videvo.net/videvo_files/video/free/2022-11/small_watermarked/221017_02_Urban%20Football_4k_004_preview.webm" type="video/mp4">
+        </video>
+        <!-- <div class="topscreen">
+            <h1>t.me/darustill</h1>
+        </div> -->
+    </div>
+</body>
+</html>
