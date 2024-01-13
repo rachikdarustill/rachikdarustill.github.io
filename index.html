@@ -1,51 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форт 862</title>
+    <title>Форт 862 | Футбол в Сочи</title>
+    <meta name="yandex-verification" content="d487bc0285771c56" />
+    <meta name="description" content="Футбол в Сочи - играем каждую среду, четверг и воскресенье на центральном стадионе имени Славы Метревели по адресу Курортный проспект 87В. Ищешь где поиграть в футбол в Сочи? Приходи!">
+    <meta name="keywords" content="Поиграть в футбол в Сочи">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
-        }
-        #myVideo {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-        .topscreen {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-sizing: border-box;
         }
         h1 {
+            margin-bottom: 30px;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 50px;
-            color: #fff;
+            font-weight: 900;
+            font-size: 35px;
+            line-height: 1.3;
+            color: #242329;
+            text-transform: uppercase;
+            letter-spacing: 0.25px;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 1.5;
+            color: #242329;
+            text-transform: uppercase;
+            letter-spacing: 0.25px;
+        }
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #242329;
+        }
+        @media screen and (min-width: 768px) {
+            h1 {
+                font-size: 50px;
+            }
+            h2 {
+                font-size: 40px;
+            }
+        }
+        .section {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 15px;
+        }
+        .section__head {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .section__container {
+            overflow: hidden;
+        }
+        .section__footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn {
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            background-color: #033dcd;
+            color: #FFF;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #242329;
+        }
+        iframe {
+            width: 100%;
+            border-radius: 30px;
+            height: 400px;
+        }
+        @media screen and (min-width: 768px) {
+            iframe {
+                height: 600px;
+            }
+        }
+        img {
+            width: 100%;
+            max-height: 650px;
+            object-fit: cover;
+        }
+        .gallery img {
+            border-radius: 30px;
+        }
+        .schedule {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .schedule__item {
+            flex: 1 0 calc(100% - 30px);
+            margin: 15px 0;
+            text-align: center;
+        }
+        .schedule__icon {
+            margin: 0 auto;
+            padding: 30px;
+            width: 100px;
+            height: 100px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            color: #242329;
+            border-radius: 50%;
+            border: 1px solid #242329;
+        }
+        .schedule__text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #242329;
+            margin: 15px 0 0;
+        }
+        @media screen and (min-width: 768px) {
+            .schedule__item {
+                flex: 1 0 calc(33.33% - 30px);
+                margin: 0 15px;
+            }
+        }
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .contacts__item {
+            flex: 1 0 calc(100% - 30px);
+            margin: 15px 0;
+            text-align: center;
+        }
+        .contacts__icon {
+            margin-bottom: 15px;
+        }
+        .contacts__icon img {
+            margin: 0 auto;
+            width: 50px;
+            height: 50px;
+            color: #242329;
+        }
+        .contacts__link {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.5;
+            text-decoration: none;
+            color: #033dcd;
+            border-bottom: 1px solid #033dcd;
+        }
+        @media screen and (min-width: 768px) {
+            .contacts__item {
+                flex: 1 0 calc(33.33% - 30px);
+                margin: 0 15px;
+            }
+        }
+        .header {
+            padding: 15px 0;
+            background-color: #033dcd;
+            text-align: center;
+        }
+        .header__text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #FFF;
+        }
+        .footer {
+            padding: 15px 0;
+            background-color: #242329;
+            text-align: center;
+        }
+        .footer__text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #FFF;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #FFF;
+            background-color: #033dcd;
+            width: 40px;
+            height: 40px;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            opacity: 0.5;
+            display: none;
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            opacity: 1;
+        }
+        .swiper-button-next {
+            right: 25px;
+        }
+        .swiper-button-prev {
+            left: 25px;
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 20px;
+            font-weight: bold;
+            top: auto;
+            left: auto;
+        }
+        @media screen and (min-width: 768px) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: flex;
+            }
         }
     </style>
 </head>
 <body>
-    <div style="display: flex; align-items: flex-end; justify-content: center; height: calc(100vh - 200px); padding: 100px 60px; background: url('./rasul.jpg') center /cover;">
-        <h1 >Форт 862</h1>
-        <!-- <video autoplay muted loop id="myVideo">
-            <source src="./assets/220114_01_Drone_4k_019.mp4" type="video/mp4">
-            <source src="https://cdn.videvo.net/videvo_files/video/free/2022-11/small_watermarked/221017_02_Urban%20Football_4k_004_preview.webm" type="video/mp4">
-        </video> -->
-        <!-- <div class="topscreen">
-            <h1>t.me/darustill</h1>
-        </div> -->
+    <header class="header">
+        <p class="header__text">Форт 862 </p>
+    </header>
+
+    <div class="section" style="margin-top: 50px;">
+        <div class="section__head">
+            <h1>Сочи<br /><span>Футбол</span> для всех</h1>
+            <a href="#contacts" class="btn">Записаться</a>
+        </div>
+        <div class="section__container">
+            <div class="gallery">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/IMG_2041-min.JPEG" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/team1-min.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/team2-min.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/IMG_2034-min.JPEG" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/team3-min.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/team4-min.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/IMG_2003-min.JPEG" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/team5-min.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/team6-min.jpg" />
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section__footer">
+            <a href="#contacts" class="btn">Записаться</a>
+        </div>
     </div>
+
+    <div class="section">
+        <div class="section__head">
+            <h2>Формат 6+1</h2>
+        </div>
+        <div class="section__container">
+            <div class="schedule">
+                <div class="schedule__item">
+                    <div class="schedule__icon">1</div>
+                    <p class="schedule__text">Среда<br />начало в 20:30</h3>
+                </div>
+                <div class="schedule__item">
+                    <div class="schedule__icon">2</div>
+                    <p class="schedule__text">Четверг<br />начало в 20:30</h3>
+                </div>
+                <div class="schedule__item">
+                    <div class="schedule__icon">3</div>
+                    <p class="schedule__text">Воскресенье<br />начало в 20:30</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section__footer">
+            <a href="#contacts" class="btn">Записаться</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section__head">
+            <h2>Сочи, Курортный проспект, 87А</h2>
+        </div>
+        <div class="section__container">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae474fa805e87bcf52d6043a44c5fb6b16fbdbeda23a2e35a7781ba8c8a339e79&amp;source=constructor" width="1200" frameborder="0"></iframe>
+        </div>
+        <div class="section__footer">
+            <a href="#contacts" class="btn">Записаться</a>
+        </div>
+    </div>
+
+    <div id="contacts" class="section">
+        <div class="section__head">
+            <h2>Контакты</h2>
+        </div>
+        <div class="section__container">
+            <div class="contacts">
+                <div class="contacts__item">
+                    <div class="contacts__icon">
+                        <img src="images/telegram.svg" alt="telegram" />
+                    </div>
+                    <a href="https://t.me/fcfort862" target="_blank" class="contacts__link">t.me/fcfort862</a>
+                </div>
+                <div class="contacts__item">
+                    <div class="contacts__icon">
+                        <img src="images/vk.svg" alt="vk" />
+                    </div>
+                    <a href="https://vk.com/fort862" target="_blank" class="contacts__link">vk.com/fort862</a>
+                </div>
+                <div class="contacts__item">
+                    <div class="contacts__icon">
+                        <div class="contacts__icon">
+                            <img src="images/youtube.svg" alt="youtube" />
+                        </div>
+                    </div>
+                    <a href="https://youtube.com/@fort862" target="_blank" class="contacts__link">youtube.com/@fort862</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">Форт 862 </p>
+    </footer>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 50,
+            loop: true,
+            grabCursor: true,
+			autoplay: true,
+			autoplay: {
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true,
+				delay: 5000,
+			},
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
